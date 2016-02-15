@@ -31,7 +31,7 @@ handler.on('pull_request', (event) => {
 
   switch (pr.action) {
     case 'opened':
-      r.table('pull_requests').insert(pr).run(conn, afterInsert);
+      r.table('pull_requests').insert(pr).run(connection, afterInsert);
       break;
     case 'closed':
 
