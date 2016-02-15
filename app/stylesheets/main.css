@@ -1,0 +1,71 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+  margin: 0; padding: 0;
+  font-family: Helvetica;
+}
+
+body {
+  background: #282828;
+  color: #f9f9f9;
+}
+
+
+.dashboard {
+  padding: 2em;
+}
+
+.pull_requests {
+  display: flex;
+  flex-direction: column;
+}
+
+.pull_request {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  color: #000;
+}
+
+.pull_request .item,
+.pull_request .double-item {
+  font-size: 1.6em;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  transition: all .2s ease-out;
+}
+
+.pull_request .double-item {
+  display: flex;
+}
+
+.pull_request .title {
+  flex-grow: 1;
+  padding-left: 1em;
+}
+
+.pull_request .repo {
+  padding-left: 0.3em;
+}
+
+
+@media only screen
+and (min-width : 1224px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+@media only screen
+and (min-width : 1824px) {
+  body {
+    font-size: 30px;
+  }
+}
