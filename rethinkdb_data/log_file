@@ -1,0 +1,14 @@
+2016-02-15T20:46:02.113409000 0.474135s notice: Recursively removing directory /Users/ramon/Projects/popcubex/rethinkdb_data/tmp
+2016-02-15T20:46:02.116002000 0.476732s notice: Initializing directory /Users/ramon/Projects/popcubex/rethinkdb_data
+2016-02-15T20:46:02.116146000 0.476871s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/ramon/Projects/popcubex/rethinkdb_data' did not already exist or is empty.)
+2016-02-15T20:46:02.116224000 0.476949s notice: Running rethinkdb 2.0.3 (CLANG 6.1.0 (clang-602.0.53))...
+2016-02-15T20:46:02.120357000 0.481082s notice: Running on Darwin 14.5.0 x86_64
+2016-02-15T20:46:02.120396000 0.481120s notice: Loading data from directory /Users/ramon/Projects/popcubex/rethinkdb_data
+2016-02-15T20:46:02.375915000 0.736639s info: Automatically using cache size of 1139 MB
+2016-02-15T20:46:02.376727000 0.737451s notice: Listening for intracluster connections on port 29015
+2016-02-15T20:46:02.378792000 0.739515s notice: Listening for client driver connections on port 28015
+2016-02-15T20:46:02.378888000 0.739612s notice: Listening for administrative HTTP connections on port 8000
+2016-02-15T20:46:02.378893000 0.739617s notice: Listening on addresses: 127.0.0.1, ::1
+2016-02-15T20:46:02.378895000 0.739619s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-02-15T20:46:02.378898000 0.739621s notice: Server ready, "Eve_local_0c4" 49eecb0e-452e-4ddb-9b4b-97664e61df55
+2016-02-15T20:46:03.296347000 1.657026s notice: A newer version of the RethinkDB server is available: 2.2.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
