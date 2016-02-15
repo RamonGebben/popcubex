@@ -34,7 +34,7 @@ handler.on('pull_request', (event) => {
       r.table('pull_requests').insert(pr).run(connection, afterInsert);
       break;
     case 'closed':
-
+      r.table('pull_requests').filter({number: pr.number}).delete().run(connection, afterDelete);
       break;
     default:
       // do nothing
@@ -49,4 +49,9 @@ handler.on('pull_request', (event) => {
 function afterInsert(err, value){
   if( err ) throw err;
   else console.log(`[${new Date()}] New written value: ${value}`);
+}
+
+function afterDelete(err, value){
+  if( err ) throw err;
+  else console.log(`[${new Date()}] Delete pull request value: ${value}`);
 }
