@@ -16,15 +16,6 @@ handler.on('error', (err) => {
 });
 
 handler.on('pull_request', (event) => {
-  console.log('Received a pull request event for %s to %s',
-    event.payload.repository.name,
-    event.payload.ref)
-});
-
-handler.on('issues', (event) => {
-  console.log('Received an issue event for %s action=%s: #%d %s',
-    event.payload.repository.name,
-    event.payload.action,
-    event.payload.issue.number,
-    event.payload.issue.title);
+  let pr = event.payload
+  console.log(`pull request ${event.payload.repository.name} - #${pr.number} was ${event.payload.action}`);
 });
