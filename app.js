@@ -57,11 +57,13 @@ function writeValue(table, pr){
         let data = cursor.toArray();
         console.log('--->>', data )
         if( data.length > 0 ){
+          console.log('Doing update!!');
           r.table('pull_requests').update(data[0].id, pr).run(connection, (err, value) => {
             if( err ) reject(err);
             else resolve(value);
           });
         }else {
+          console.log('Creating new PR!!');
           r.table('pull_requests').insert(pr).run(connection, (err, value) => {
             if( err ) reject(err);
             else resolve(value);
