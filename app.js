@@ -50,21 +50,22 @@ function writePR(pr){
   return new Promise((resolve, reject) => {
     r.table('pull_requests').filter({number: pr.number}).run(connection, (err, cursor) => {
       if( err ) return reject(err);
-        let data = cursor.toArray();
-        console.log('--->>', data )
-        if( data.length > 0 ){
-          console.log('Doing update!!');
-          r.table('pull_requests').update(data[0].id, pr).run(connection, (err, value) => {
-            if( err ) reject(err);
-            else resolve(value);
-          });
-        }else {
-          console.log('Creating new PR!!');
-          r.table('pull_requests').insert(pr).run(connection, (err, value) => {
-            if( err ) reject(err);
-            else resolve(value);
-          });
-        }
+        cursor.toArray().then( data => {
+          console.log('--->>', data )
+          if( data.length > 0 ){
+            console.log('Doing update!!');
+            r.table('pull_requests').update(data[0].id, pr).run(connection, (err, value) => {
+              if( err ) reject(err);
+              else resolve(value);
+            });
+          }else {
+            console.log('Creating new PR!!');
+            r.table('pull_requests').insert(pr).run(connection, (err, value) => {
+              if( err ) reject(err);
+              else resolve(value);
+            });
+          }
+        });
     });
   });
 }
