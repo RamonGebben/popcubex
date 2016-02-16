@@ -32,17 +32,15 @@ handler.on('pull_request', (event) => {
   switch (pr.action) {
     case 'opened':
       writePR(pr);
-      r.table('pull_requests').insert(pr).run(connection, afterInsert);
       break;
     case 'closed':
-      r.table('pull_requests').filter({number: pr.number}).delete().run(connection, afterDelete);
+      deletePR(pr)
       break;
     default:
       // do nothing
       break;
 
   }
-
   console.log(`pull request ${event.payload.repository.name} - #${pr.number} was ${event.payload.action}`);
 });
 
@@ -51,15 +49,12 @@ function writePR(pr){
     r.table('pull_requests').filter({number: pr.number}).run(connection, (err, cursor) => {
       if( err ) return reject(err);
         cursor.toArray().then( data => {
-          console.log('--->>', data )
           if( data.length > 0 ){
-            console.log('Doing update!!');
             r.table('pull_requests').update(data[0].id, pr).run(connection, (err, value) => {
               if( err ) reject(err);
               else resolve(value);
             });
           }else {
-            console.log('Creating new PR!!');
             r.table('pull_requests').insert(pr).run(connection, (err, value) => {
               if( err ) reject(err);
               else resolve(value);
@@ -69,6 +64,16 @@ function writePR(pr){
     });
   });
 }
+
+function deletePR(pr){
+  return new Promise((resolve, reject) => {
+    r.table('pull_requests').filter({number: pr.number}).delete().run(connection, (err, value) => {
+      if( err ) reject(err);
+      else resolve(value);
+    });
+  });
+}
+
 
 function afterInsert(err, value){
   if( err ) throw err;
