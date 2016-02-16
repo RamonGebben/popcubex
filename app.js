@@ -31,6 +31,7 @@ handler.on('pull_request', (event) => {
 
   switch (pr.action) {
     case 'opened':
+      writePR(pr);
       r.table('pull_requests').insert(pr).run(connection, afterInsert);
       break;
     case 'closed':
@@ -45,6 +46,31 @@ handler.on('pull_request', (event) => {
   console.log(`pull request ${event.payload.repository.name} - #${pr.number} was ${event.payload.action}`);
 });
 
+
+function writePR(pr){
+  return writeValue('pull_requests', pr);
+}
+
+function writeValue(table, pr){
+  return new Promise((resolve, reject) => {
+    r.table(table).filter({number: pr.number}).run(connection, cursor => {
+        let data = cursor.toArray();
+        console.log('--->>', data )
+        if( data.length > 0 ){
+          r.table('pull_requests').update(data[0].id, pr).run(connection, (err, value) => {
+            if( err ) reject(err);
+            else resolve(value);
+          });
+        }else {
+          r.table('pull_requests').insert(pr).run(connection, (err, value) => {
+            if( err ) reject(err);
+            else resolve(value);
+          });
+        }
+    });
+  });
+
+}
 
 function afterInsert(err, value){
   if( err ) throw err;
