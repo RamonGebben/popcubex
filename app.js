@@ -46,14 +46,10 @@ handler.on('pull_request', (event) => {
   console.log(`pull request ${event.payload.repository.name} - #${pr.number} was ${event.payload.action}`);
 });
 
-
 function writePR(pr){
-  return writeValue('pull_requests', pr);
-}
-
-function writeValue(table, pr){
   return new Promise((resolve, reject) => {
-    r.table(table).filter({number: pr.number}).run(connection, cursor => {
+    r.table('pull_requests').filter({number: pr.number}).run(connection, (err, cursor) => {
+      if( err ) return reject(err);
         let data = cursor.toArray();
         console.log('--->>', data )
         if( data.length > 0 ){
@@ -71,7 +67,6 @@ function writeValue(table, pr){
         }
     });
   });
-
 }
 
 function afterInsert(err, value){
