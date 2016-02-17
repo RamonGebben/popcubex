@@ -44,14 +44,9 @@ class Dashboard extends React.Component {
   render() {
     return (
         <section>
-          /*
-              <source src="/app/images/forever_clouds.mp4" type="video/mp4"></source>
-              <source src="/app/images/Bagheera.mp4" type="video/mp4"></source>
-              <source src="/app/images/35mm.mp4" type="video/mp4"></source>
-              <source src="/app/images/close_encounters.mp4" type="video/mp4"></source>
-          */
           <video autoPlay loop  id="bgvid">
-            <source src="/app/images/35mm.mp4" type="video/mp4"></source>
+            <source src="/app/images/backyard.webm" type="video/webm"></source>
+            <source src="/app/images/backyard.mp4" type="video/mp4"></source>
           </video>
           <header className="header">
             <h1 className="header-name">ItemBoard</h1>
