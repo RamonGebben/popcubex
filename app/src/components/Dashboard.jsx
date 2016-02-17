@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
         },
         {
           id: '429',
-          title: 'Some awesome feature request with a very long title because peeps are not descriptive',
+          title: 'Some awesome feature request with a very long title because peeps are not descriptive are not descriptive',
           assignee: 'Paas Haas',
           reporoot: 'popcubex',
           repo: 'rpi-image',

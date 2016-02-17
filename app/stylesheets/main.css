@@ -571,7 +571,7 @@ h1, h2, h3, h4, h5, h6 {
 .pull_request {
     display: flex;
     justify-content: flex-start;
-    padding: 1.5rem;
+    padding: .5rem .5rem;
     margin-top: 2rem;
     color: #fff;
     transition: all .25s;
@@ -589,8 +589,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.6rem;
     user-select: none;
     text-overflow: ellipsis;
-    white-space: nowrap;
     overflow-x: visible;
+    line-height: 1.25;
 }
 
 /*.pull_request:after{*/
@@ -642,10 +642,20 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.pull_request .item_assignee {
+    line-height: 1.25;
+    white-space: normal;
+    width:75px;
+    opacity:.5;
+    font-size: 2.5rem;
+    float:right;
+    margin-right:1rem;
+}
+
 .pull_request .item_repo {
     padding-left: 0.5rem;
     opacity: .5;
-    margin:-1rem 0;
+    margin:-.5rem 0;
     min-width:13rem;
     line-height: 1.1;
 }
@@ -664,7 +674,7 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(0, 0, 0, .25);
     font-weight: bold;
     font-size: 6.5rem;
-    margin: -2.25rem 0rem -2.25rem -.75rem;
+    margin: -1.25rem 0rem;
 }
 
 .item_id small {
