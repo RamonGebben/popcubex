@@ -475,7 +475,21 @@ body {
     background: linear-gradient(45deg, rgba(18,18,18,1) 0%, rgba(102,102,102,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121212', endColorstr='#666666', GradientType=1 );
   padding:2rem;
-    background-image: url('../images/forever_clouds.gif');
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     background-size: cover;
 }
 

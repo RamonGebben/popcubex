@@ -38,7 +38,7 @@ var common = {
         loader : 'file-loader'
       },
       {
-        test   : /\.(gif|jpg|png?)(\?[a-z0-9]+)?$/,
+        test   : /\.(mp4|gif|jpg|png?)(\?[a-z0-9]+)?$/,
         loader : 'file-loader'
       },
       {
