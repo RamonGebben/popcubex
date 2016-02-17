@@ -33,7 +33,10 @@ var common = {
         loaders: ['react-hot', 'babel?stage=1'],
         include: path.resolve(ROOT_PATH, 'app')
       },
-
+      {
+        test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader : 'file-loader'
+      },
       {
         test: /\.css$/,
         loaders: ['style', 'css']

@@ -11,25 +11,31 @@ class Dashboard extends React.Component {
     this.state = {
       pull_requests: [
         {
-          id: '#214',
+          id: '214',
           title: 'First PR ever',
           assignee: 'Santa Clause',
-          repo: 'popcubex/dashboard',
-          color: '#acecf7'
+          reporoot: 'popcubex',
+          repo: 'dashboard',
+          color: '#acecf7',
+          class : 'pull_request request_prio_one'
         },
         {
-          id: '#396',
+          id: '396',
           title: 'Another PR',
           assignee: 'Zwarte piet',
-          repo: 'popcubex/dashboard',
-          color: '#f4989c'
+          reporoot: 'popcubex',
+          repo: 'dashboard',
+          color: '#f4989c',
+          class : 'pull_request request_prio_two'
         },
         {
-          id: '#429',
+          id: '429',
           title: 'Some awesome feature request with a very long title because peeps are not descriptive',
           assignee: 'Paas Haas',
-          repo: 'popcubex/rpi-image',
-          color: '#d6f6dd'
+          reporoot: 'popcubex',
+          repo: 'rpi-image',
+          color: '#d6f6dd',
+          class : 'pull_request request_prio_three'
         }
       ]
     }
@@ -37,9 +43,14 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-        <div className='dashboard'>
+        <section>
+          <header className="header">
+            <h1 className="header-name">ItemBoard</h1>
+          </header>
+          <main className='dashboard'>
             <PullRequestList items={this.state.pull_requests}/>
-        </div>
+          </main>
+        </section>
     );
   }
 }

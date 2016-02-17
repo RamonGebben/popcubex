@@ -4,13 +4,13 @@ import {colorLum} from '../util/helpers';
 
 function PullRequest(props){
   return (
-      <div className='pull_request' style={{backgroundColor: props.item.color, color: colorLum(props.item.color, -0.5)}}>
-          <div className='double-item'>
-            <div className='id'>{props.item.id}</div>
-            <div className='repo'>{props.item.repo}</div>
+      <div className={props.item.class}>
+          <div className='item double-item'>
+            <div className='item_id'><small>#</small>{props.item.id}</div>
+            <div className='item_repo'><span className="repo_root">{props.item.reporoot}</span> / {props.item.repo}</div>
           </div>
-          <div className='item title'>{props.item.title}</div>
-          <div className='item assignee'>{props.item.assignee}</div>
+          <div className='item item_title'>{props.item.title}</div>
+          <div className='item item_assignee'>{props.item.assignee}</div>
       </div>
   );
 }
