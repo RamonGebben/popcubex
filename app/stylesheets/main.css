@@ -475,6 +475,8 @@ body {
     background: linear-gradient(45deg, rgba(18,18,18,1) 0%, rgba(102,102,102,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121212', endColorstr='#666666', GradientType=1 );
   padding:2rem;
+    background-image: url('../images/forever_clouds.gif');
+    background-size: cover;
 }
 
 h1,h2,h3,h4,h5,h6 {

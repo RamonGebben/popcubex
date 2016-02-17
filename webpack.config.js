@@ -38,6 +38,10 @@ var common = {
         loader : 'file-loader'
       },
       {
+        test   : /\.(gif|jpg|png?)(\?[a-z0-9]+)?$/,
+        loader : 'file-loader'
+      },
+      {
         test: /\.css$/,
         loaders: ['style', 'css']
       }
