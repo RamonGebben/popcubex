@@ -1,7 +1,9 @@
 import React from 'react';
+import io from 'socket.io-client';
 
 import PullRequestList from './PullRequestList'
-// /d6f6dd-dac4f7-f4989c-afc2d5-acecf7
+
+const socketURL = 'http://localhost:4444';
 
 class Dashboard extends React.Component {
 
@@ -9,30 +11,22 @@ class Dashboard extends React.Component {
     super(props);
     this.props = props;
     this.state = {
-      pull_requests: [
-        {
-          id: '#214',
-          title: 'First PR ever',
-          assignee: 'Santa Clause',
-          repo: 'popcubex/dashboard',
-          color: '#acecf7'
-        },
-        {
-          id: '#396',
-          title: 'Another PR',
-          assignee: 'Zwarte piet',
-          repo: 'popcubex/dashboard',
-          color: '#f4989c'
-        },
-        {
-          id: '#429',
-          title: 'Some awesome feature request with a very long title because peeps are not descriptive',
-          assignee: 'Paas Haas',
-          repo: 'popcubex/rpi-image',
-          color: '#d6f6dd'
-        }
-      ]
+      pull_requests: [],
+      client_id: null
     }
+  }
+
+  componentDidMount(){
+    this.client = io.connect(socketURL);
+    this.client.on('connected', (id) => {
+      this.setState({client_id: id});
+      console.log(`I have being assigned id: ${ id }`);
+    });
+
+    this.client.on('pull_requests', (pull_requests) => {
+      this.setState({pull_requests});
+      console.log('Pull requests received', pull_requests);
+    });
   }
 
   render() {
@@ -45,3 +39,4 @@ class Dashboard extends React.Component {
 }
 
 export default Dashboard;
+// /d6f6dd-dac4f7-f4989c-afc2d5-acecf7

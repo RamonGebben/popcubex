@@ -22,13 +22,18 @@
     "style-loader": "^0.12.3",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1",
-    "webpack-merge": "^0.1.2"
+    "webpack-merge": "^0.1.2",
+    "mocha": "^2.1.0",
+    "should": "^4.6.0",
+    "socket.io": "^1.2.1",
+    "socket.io-client": "^1.2.1"
   },
   "private": true,
   "scripts": {
     "build": "TARGET=build webpack",
     "start": "TARGET=dev webpack-dev-server --devtool eval-source --progress --colors --hot --inline --history-api-fallback",
-    "setup:db": "./scripts/setup-db.js"
+    "setup:db": "./scripts/setup-db.js",
+    "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
