@@ -35,9 +35,14 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-        <div className='dashboard'>
+        <section>
+          <header className="header">
+            <h1 className="header-name">ItemBoard</h1>
+          </header>
+          <main className='dashboard'>
             <PullRequestList items={this.state.pull_requests}/>
-        </div>
+          </main>
+        </section>
     );
   }
 }
