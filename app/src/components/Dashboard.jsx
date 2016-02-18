@@ -29,6 +29,10 @@ class Dashboard extends React.Component {
     });
   }
 
+  componentWillUnmount(){
+    this.client.disconnect();
+  }
+
   render() {
     return (
         <div className='dashboard'>
