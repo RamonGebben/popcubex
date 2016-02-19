@@ -65,3 +65,30 @@
 2016-02-19T23:04:58.893602000 0.221235s notice: Server ready, "Eve_local_0c4" 49eecb0e-452e-4ddb-9b4b-97664e61df55
 2016-02-19T23:05:00.728872000 2.056463s notice: A newer version of the RethinkDB server is available: 2.2.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
 2016-02-19T23:10:09.967503000 311.282709s notice: Server got SIGINT from pid 258, uid 501; shutting down...
+2016-02-19T23:20:14.680996000 0.013634s notice: Running rethinkdb 2.0.3 (CLANG 6.1.0 (clang-602.0.53))...
+2016-02-19T23:20:14.685782000 0.018417s notice: Running on Darwin 14.5.0 x86_64
+2016-02-19T23:20:14.686219000 0.018852s notice: Loading data from directory /Users/ramon/Projects/popcubex/rethinkdb_data
+2016-02-19T23:20:14.792777000 0.125409s info: Automatically using cache size of 7261 MB
+2016-02-19T23:20:14.793725000 0.126357s notice: Listening for intracluster connections on port 29015
+2016-02-19T23:20:14.796031000 0.128664s notice: Listening for client driver connections on port 28015
+2016-02-19T23:20:14.796164000 0.128797s notice: Listening for administrative HTTP connections on port 8080
+2016-02-19T23:20:14.796166000 0.128798s notice: Listening on addresses: 127.0.0.1, ::1
+2016-02-19T23:20:14.796169000 0.128801s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-02-19T23:20:14.796174000 0.128807s notice: Server ready, "Eve_local_0c4" 49eecb0e-452e-4ddb-9b4b-97664e61df55
+2016-02-19T23:20:15.377634000 0.710267s notice: A newer version of the RethinkDB server is available: 2.2.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-02-19T23:20:37.744287000 23.075956s notice: Server got SIGINT from pid 503, uid 501; shutting down...
+2016-02-19T23:20:37.744430000 23.076100s notice: Shutting down client connections...
+2016-02-19T23:20:37.744576000 23.076246s notice: All client connections closed.
+2016-02-19T23:20:37.744588000 23.076258s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-02-19T23:20:37.748961000 23.080631s notice: Storage engine shut down.
+2016-02-19T23:21:45.832244000 0.456341s notice: Running rethinkdb 2.0.3 (CLANG 6.1.0 (clang-602.0.53))...
+2016-02-19T23:21:45.838292000 0.462385s notice: Running on Darwin 14.5.0 x86_64
+2016-02-19T23:21:45.838349000 0.462439s notice: Loading data from directory /Users/ramon/Projects/popcubex/rethinkdb_data
+2016-02-19T23:21:45.915650000 0.539740s info: Automatically using cache size of 6455 MB
+2016-02-19T23:21:45.916172000 0.540262s notice: Listening for intracluster connections on port 29015
+2016-02-19T23:21:45.917488000 0.541578s notice: Listening for client driver connections on port 28015
+2016-02-19T23:21:45.917581000 0.541671s notice: Listening for administrative HTTP connections on port 8080
+2016-02-19T23:21:45.917583000 0.541673s notice: Listening on addresses: 127.0.0.1, ::1
+2016-02-19T23:21:45.917585000 0.541675s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-02-19T23:21:45.917588000 0.541678s notice: Server ready, "Eve_local_0c4" 49eecb0e-452e-4ddb-9b4b-97664e61df55
+2016-02-19T23:21:46.258059000 0.882149s notice: A newer version of the RethinkDB server is available: 2.2.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.

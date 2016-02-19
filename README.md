@@ -9,11 +9,38 @@ When you are starting with this project fresh and you need to setup everything y
 ```bash
 npm run setup:env
 ```
+
+## Database
 When you want to start with a client database you can run:
 
 ```bash
-npm run setup:db
+npm run db:setup
 ```
+For loading the test db use:
+
+```bash
+npm run db:restore
+```
+
+And to update the test db:
+
+```bash
+npm run db:dump
+```
+
+Note that in order for these commands to work you should have the python drivers installed.
+You can install these using pip:
+
+```bash
+sudo pip install rethinkdb
+```
+
+If you do not have pip, you will need to install this as well:
+
+```bash
+easy_install pip;
+```
+If this does not work [read the docs](https://pip.pypa.io/en/stable/installing/)
 
 ## Running
 

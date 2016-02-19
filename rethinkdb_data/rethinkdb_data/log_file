@@ -1,0 +1,10 @@
+2016-02-19T23:13:31.582908000 0.003104s notice: Recursively removing directory /Users/ramon/Projects/popcubex/rethinkdb_data/rethinkdb_data/tmp
+2016-02-19T23:13:31.584163000 0.004362s notice: Initializing directory /Users/ramon/Projects/popcubex/rethinkdb_data/rethinkdb_data
+2016-02-19T23:13:31.584239000 0.004434s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/ramon/Projects/popcubex/rethinkdb_data/rethinkdb_data' did not already exist or is empty.)
+2016-02-19T23:13:31.584255000 0.004451s notice: Running rethinkdb 2.0.3 (CLANG 6.1.0 (clang-602.0.53))...
+2016-02-19T23:13:31.590159000 0.010356s notice: Running on Darwin 14.5.0 x86_64
+2016-02-19T23:13:31.590201000 0.010396s notice: Loading data from directory /Users/ramon/Projects/popcubex/rethinkdb_data/rethinkdb_data
+2016-02-19T23:13:31.826207000 0.246402s info: Automatically using cache size of 585 MB
+2016-02-19T23:13:31.826591000 0.246786s notice: Listening for intracluster connections on port 29015
+2016-02-19T23:13:31.828418000 0.248614s notice: Listening for client driver connections on port 28015
+2016-02-19T23:13:31.871635000 0.291831s error: Could not bind to http port: The address at localhost:8080 is reserved or already in use.

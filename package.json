@@ -34,7 +34,9 @@
   "scripts": {
     "build": "TARGET=build webpack",
     "start": "TARGET=dev webpack-dev-server --devtool eval-source --progress --colors --hot --inline --history-api-fallback",
-    "setup:db": "node scripts/setup-db.js",
+    "db:setup": "node scripts/setup-db.js",
+    "db:dump": "rethinkdb dump -f db_dump",
+    "db:restore": "rethinkdb restore db_dump --force",
     "setup:env": "brew update && brew install rethinkdb; npm i;",
     "server": "node scripts/server.js"
   },
