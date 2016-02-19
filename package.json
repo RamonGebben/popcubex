@@ -4,6 +4,7 @@
   "description": "Overview of open pull requests",
   "main": "webpack.config.js",
   "dependencies": {
+    "express": "^4.13.4",
     "github-webhook-handler": "^0.5.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.7",
