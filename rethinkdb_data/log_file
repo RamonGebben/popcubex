@@ -46,3 +46,22 @@
 2016-02-19T20:51:28.948463001 0.469349s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
 2016-02-19T20:51:28.948466000 0.469351s notice: Server ready, "Eve_local_0c4" 49eecb0e-452e-4ddb-9b4b-97664e61df55
 2016-02-19T20:51:29.952246000 1.473088s notice: A newer version of the RethinkDB server is available: 2.2.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-02-19T23:04:14.475417000 0.313053s notice: Running rethinkdb 2.0.3 (CLANG 6.1.0 (clang-602.0.53))...
+2016-02-19T23:04:14.498990000 0.336621s notice: Running on Darwin 14.5.0 x86_64
+2016-02-19T23:04:14.501129000 0.338754s notice: Loading data from directory /Users/ramon/Projects/popcubex/rethinkdb_data
+2016-02-19T23:04:14.681293000 0.518917s info: Automatically using cache size of 263 MB
+2016-02-19T23:04:14.682939000 0.520562s notice: Listening for intracluster connections on port 29015
+2016-02-19T23:04:14.686787000 0.524411s notice: Listening for client driver connections on port 28015
+2016-02-19T23:04:14.862989000 0.700614s error: Could not bind to http port: The address at localhost:8080 is reserved or already in use.
+2016-02-19T23:04:58.726293000 0.053935s notice: Running rethinkdb 2.0.3 (CLANG 6.1.0 (clang-602.0.53))...
+2016-02-19T23:04:58.741768000 0.069404s notice: Running on Darwin 14.5.0 x86_64
+2016-02-19T23:04:58.741892000 0.069525s notice: Loading data from directory /Users/ramon/Projects/popcubex/rethinkdb_data
+2016-02-19T23:04:58.878484000 0.206118s info: Automatically using cache size of 324 MB
+2016-02-19T23:04:58.880841000 0.208475s notice: Listening for intracluster connections on port 29015
+2016-02-19T23:04:58.889005000 0.216638s notice: Listening for client driver connections on port 28015
+2016-02-19T23:04:58.893559000 0.221194s notice: Listening for administrative HTTP connections on port 8000
+2016-02-19T23:04:58.893576000 0.221209s notice: Listening on addresses: 127.0.0.1, ::1
+2016-02-19T23:04:58.893595000 0.221229s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-02-19T23:04:58.893602000 0.221235s notice: Server ready, "Eve_local_0c4" 49eecb0e-452e-4ddb-9b4b-97664e61df55
+2016-02-19T23:05:00.728872000 2.056463s notice: A newer version of the RethinkDB server is available: 2.2.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-02-19T23:10:09.967503000 311.282709s notice: Server got SIGINT from pid 258, uid 501; shutting down...

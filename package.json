@@ -33,8 +33,9 @@
   "scripts": {
     "build": "TARGET=build webpack",
     "start": "TARGET=dev webpack-dev-server --devtool eval-source --progress --colors --hot --inline --history-api-fallback",
-    "setup:db": "./scripts/setup-db.js",
-    "test": "mocha -R spec"
+    "setup:db": "node scripts/setup-db.js",
+    "setup:env": "brew update && brew install rethinkdb; npm i;",
+    "server": "node scripts/server.js"
   },
   "repository": {
     "type": "git",

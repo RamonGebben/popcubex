@@ -3,6 +3,7 @@
 const http = require('http')
 const createHandler = require('github-webhook-handler')
 const handler = createHandler({ path: '/webhook', secret: 'myhashsecret' })
+const port = process.env.PORT || 7777
 const r = require('rethinkdb');
 let connection = null;
 
@@ -18,7 +19,7 @@ http.createServer((req, res) => {
     res.statusCode = 404
     res.end('no such location')
   })
-}).listen(7777);
+}).listen(port);
 
 console.log(`[${new Date()}] Started Webhook server`);
 
