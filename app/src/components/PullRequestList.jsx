@@ -12,11 +12,10 @@ class PullRequestList extends React.Component {
   }
 
   render() {
+    let pull_requests = this.props.items.map(item => <PullRequest key={item.id} item={ item } />);
     return (
         <div className='pull_requests'>
-            {this.props.items.map(item => {
-                return <PullRequest key={item.id} item={ item } />
-            })}
+          {pull_requests}
         </div>
     );
   }
