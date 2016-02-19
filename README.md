@@ -21,7 +21,7 @@ When you want to run the application you will need to open two terminals.
 In the first one you run:
 
 ```bash
-npm server
+npm run server
 ```
 This will startup the webhook, websocket server the database.
 Now in the other terminal you run:
