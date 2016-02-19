@@ -1,17 +1,9 @@
 'use strict';
 
-const app = require('express')();
-const http = require('http').Server(app);
 const fs = require('fs');
-const io = require('socket.io')(http);
+const io = require('socket.io').listen(4444);
 const r = require('rethinkdb');
 let connection = null;
-
-// const pull_requests = JSON.parse(fs.readFileSync(__dirname +'/mock-data/pull-requests.json'));
-
-app.get('/', function(req, res){
-  res.sendfile('./build/index.html');
-});
 
 function getPullRequests(holaback){
   r.table('pull_requests').run(connection, (err, cursor) => {
@@ -38,10 +30,6 @@ io.on('connection', function(socket) {
   socket.on('disconnect', function() {
     console.log(`[${new Date()}] client has disconnected`);
   });
-});
-
-http.listen(4444, function() {
-  console.log('listening on *: 4444');
 });
 
 function onDbConnect(conn){
@@ -75,3 +63,5 @@ function refreshPullRequests(){
 r.connect({
     db: 'popcubex'
 }).then(onDbConnect);
+
+console.log('Listening on 4444');
