@@ -559,7 +559,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dashboard {
-    padding: 2rem 0rem;
+    padding: 0rem;
+    margin-top: -2rem;
 }
 
 .pull_requests {
@@ -603,6 +604,16 @@ h1, h2, h3, h4, h5, h6 {
 /*background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));*/
 /*border-radius : 20px 5px 5px 5px;*/
 /*}*/
+
+.pull_request {
+    background-color: #999;
+    background-color: rgba(153,153,153, 0.75);
+}
+
+.pull_request:hover {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
+}
 
 .request_prio_one {
     background-color: #acecf7;
@@ -662,8 +673,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pull_request {
-    transition: all .75s ease-out;
-    transform: skewX(-3deg) rotateX(10deg) rotateY(20deg) rotateZ(-5deg) translateX(15%) scale(1.15, 1.15);
+    transition: all .5s ease-out;
+    transform: skewX(-10deg) rotateX(10deg) rotateY(15deg) rotateZ(-10deg) translateX(11%) scale(1.07, 1.15);
 
 }
 
